@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugDLL2|Win32">
+      <Configuration>DebugDLL2</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDLL2|x64">
+      <Configuration>DebugDLL2</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDLL|Win32">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDLL|x64">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugLib|Win32">
+      <Configuration>DebugLib</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugLib|x64">
+      <Configuration>DebugLib</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|x64">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLib|x64">
+      <Configuration>ReleaseLib</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D72E4D8B-15E8-4E54-BDA9-7E42D2739344}</ProjectGuid>
+    <RootNamespace>Heimdallr</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLib|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLib|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL2|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugLib|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\BoostPropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugLib|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\BoostPropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\BoostPropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL2|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\BoostPropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\BoostPropertySheet.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Debug_x64</OutDir>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLib|x64'">
+    <OutDir>$(SolutionDir)Debug_x64</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Release_x64</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|x64'">
+    <OutDir>$(SolutionDir)\Release_x64</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <OutDir>$(SolutionDir)\Release_x64</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL2|x64'">
+    <OutDir>$(SolutionDir)\Debug_x64</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <OutDir>$(SolutionDir)\Release_x64</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLib|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Muse;$(SolutionDir)/_dep/hdf5_64/include;$(SolutionDir)/_dep/icu_64/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRTDBG_MAP_ALLOC;_MBCS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)_x64/;$(SolutionDir)/_dep/graphviz/lib/release/lib;$(SolutionDir)/_dep/icu_64/lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>icuuc.lib;muse.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>"$(TargetDir)\$(TargetName).exe" --result_code=no --report_level=no --detect_memory_leaks=0</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLib|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Muse;$(SolutionDir)/_dep/hdf5_64/include;$(SolutionDir)/_dep/icu_64/include;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_STATICLIB;_MBCS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)/_dep/icu_64/lib64;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>muse.lib;</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(TargetDir)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Muse;$(SolutionDir)/_dep/hdf5_64/include;$(SolutionDir)/_dep/icu_64/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)_x64/;$(SolutionDir)/_dep/icu_64/lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>muse.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Muse;$(SolutionDir)/_dep/hdf5_64/include;$(SolutionDir)/_dep/icu_64/include;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_STATICLIB;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)/_dep/icu_64/lib64;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>muse.lib;</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(TargetDir)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Muse;$(SolutionDir)/_dep/hdf5_64/include;$(SolutionDir)/_dep/icu_64/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_STATICLIB;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(TargetDir);$(SolutionDir)/_dep/icu_64/lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>icuuc.lib;muse.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>muse.lib;</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(TargetDir)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL2|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Muse;$(SolutionDir)/_dep/hdf5_64/include;$(SolutionDir)/_dep/icu_64/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_STATICLIB;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(TargetDir);$(SolutionDir)/_dep/icu_64/lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>muse.lib;</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(TargetDir)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Muse;$(SolutionDir)/_dep/hdf5_64/include;$(SolutionDir)/_dep/icu_64/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_STATICLIB;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(TargetDir);$(SolutionDir)/_dep/icu_64/lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>icuuc.lib;muse.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>muse.lib;</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(TargetDir)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ChartParser.h" />
+    <ClInclude Include="ChartParserAgenda.h" />
+    <ClInclude Include="ChartParserChart.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="c_DocParser.h" />
+    <ClInclude Include="c_interface\c_interface.h" />
+    <ClInclude Include="DepData.h" />
+    <ClInclude Include="DepParser.h" />
+    <ClInclude Include="DepParserState.h" />
+    <ClInclude Include="DepRuleEngine.h" />
+    <ClInclude Include="DepRuleNode.h" />
+    <ClInclude Include="DepRuleNodeFactory.h" />
+    <ClInclude Include="dep_rule.tab.h" />
+    <ClInclude Include="dijkstra_algo.h" />
+    <ClInclude Include="DocParser.h" />
+    <ClInclude Include="EdgeInfoIO.h" />
+    <ClInclude Include="EdgeInfoParser.h" />
+    <ClInclude Include="EdgeInfoType.h" />
+    <ClInclude Include="EdgeTreeType.h" />
+    <ClInclude Include="IParserInitializable.h" />
+    <ClInclude Include="main_interface.h" />
+    <ClInclude Include="MatchedDepRule.h" />
+    <ClInclude Include="ParseException.h" />
+    <ClInclude Include="ParserInitializer.h" />
+    <ClInclude Include="ParserInitLexicalMarker.h" />
+    <ClInclude Include="PNAgenda.h" />
+    <ClInclude Include="PNChart.h" />
+    <ClInclude Include="PNGraphBuilder.h" />
+    <ClInclude Include="PNGraphLayout.h" />
+    <ClInclude Include="PNParser.h" />
+    <ClInclude Include="PNPropArg.h" />
+    <ClInclude Include="PNPropBinaryMapper.h" />
+    <ClInclude Include="PNPropLayout.h" />
+    <ClInclude Include="PNTextLayout.h" />
+    <ClInclude Include="PropEdge.h" />
+    <ClInclude Include="PropNode.h" />
+    <ClInclude Include="PropNodeGraph.h" />
+    <ClInclude Include="RuleAffinityChecker.h" />
+    <ClInclude Include="RuleConstraint.h" />
+    <ClInclude Include="RuleConstraintChecker.h" />
+    <ClInclude Include="RuleProperty.h" />
+    <ClInclude Include="SeqDelimiters.h" />
+    <ClInclude Include="StateTree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChartParser.cpp" />
+    <ClCompile Include="ChartParserAgenda.cpp" />
+    <ClCompile Include="ChartParserChart.cpp" />
+    <ClCompile Include="c_DocParser.cpp" />
+    <ClCompile Include="c_interface\c_interface.cpp" />
+    <ClCompile Include="DepData.cpp" />
+    <ClCompile Include="DepParser.cpp" />
+    <ClCompile Include="DepParserState.cpp" />
+    <ClCompile Include="DepRuleEngine.cpp" />
+    <ClCompile Include="DepRuleNode.cpp" />
+    <ClCompile Include="DepRuleNodeFactory.cpp" />
+    <ClCompile Include="dep_rule.lex.cpp" />
+    <ClCompile Include="dep_rule.tab.cpp" />
+    <ClCompile Include="dijkstra_algo.cpp" />
+    <ClCompile Include="DocParser.cpp" />
+    <ClCompile Include="EdgeInfoIO.cpp" />
+    <ClCompile Include="EdgeInfoParser.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_interface.cpp" />
+    <ClCompile Include="MatchedDepRule.cpp" />
+    <ClInclude Include="ParserInitFirstTerminal.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClCompile Include="ParserInitLexicalMarker.cpp" />
+    <ClCompile Include="PNAgenda.cpp" />
+    <ClCompile Include="PNChart.cpp" />
+    <ClCompile Include="PNGraphBuilder.cpp" />
+    <ClCompile Include="PNGraphLayout.cpp" />
+    <ClCompile Include="PNParser.cpp" />
+    <ClCompile Include="PNPropBinaryMapper.cpp" />
+    <ClCompile Include="PNPropLayout.cpp" />
+    <ClCompile Include="PNTextLayout.cpp" />
+    <ClCompile Include="PropEdge.cpp" />
+    <ClCompile Include="PropNode.cpp" />
+    <ClCompile Include="PropNodeGraph.cpp" />
+    <ClCompile Include="RuleAffinityChecker.cpp" />
+    <ClCompile Include="RuleConstraint.cpp" />
+    <ClCompile Include="RuleConstraintChecker.cpp" />
+    <ClCompile Include="StateTree.cpp" />
+    <ClCompile Include="TestCase\testChartParser.cpp" />
+    <ClCompile Include="TestCase\testMatchedDepRule.cpp" />
+    <ClCompile Include="TestCase\testRuleEngine.cpp" />
+    <ClCompile Include="TestCase\testRulePostProc.cpp" />
+    <ClCompile Include="test_PNGraph.cpp" />
+    <ClCompile Include="test_rule_factory.cpp" />
+    <ClCompile Include="test_rule_parse.cpp" />
+    <ClCompile Include="test_state_cost.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="dep_rule.l">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">c:\bison_flex\win_flex.exe --wincompat --outfile=$(ProjectDir)%(Filename).lex.cpp %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|x64'">c:\bison_flex\win_flex.exe --wincompat --outfile=$(ProjectDir)%(Filename).lex.cpp %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">c:\bison_flex\win_flex.exe --wincompat --outfile=$(ProjectDir)%(Filename).lex.cpp %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugDLL2|x64'">c:\bison_flex\win_flex.exe --wincompat --outfile=$(ProjectDir)%(Filename).lex.cpp %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">c:\bison_flex\win_flex.exe --wincompat --outfile=$(ProjectDir)%(Filename).lex.cpp %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)dep_grammar/%(Filename).lex.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|x64'">$(ProjectDir)dep_grammar/%(Filename).lex.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">$(ProjectDir)%(Filename).lex.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL2|x64'">$(ProjectDir)%(Filename).lex.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">$(ProjectDir)%(Filename).lex.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">c:\bison_flex\win_flex.exe --wincompat --outfile=$(ProjectDir)%(Filename).lex.cpp %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)%(Filename).lex.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLib|x64'">c:\bison_flex\win_flex.exe --wincompat --outfile=$(ProjectDir)%(Filename).lex.cpp %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLib|x64'">$(ProjectDir)dep_grammar/%(Filename).lex.cpp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="dep_rule.y">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLib|x64'">c:\bison_flex\win_bison.exe -t --output=$(ProjectDir)%(Filename).tab.cpp --defines=$(ProjectDir)%(Filename).tab.h %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLib|x64'">$(ProjectDir)%(Filename).tab.cpp;$(ProjectDir)%(Filename).tab.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)%(Filename).tab.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">c:\bison_flex\win_bison.exe -t -v --output=$(ProjectDir)%(Filename).tab.cpp --defines=$(ProjectDir)%(Filename).tab.h %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">c:\bison_flex\win_bison.exe -t --output=$(ProjectDir)%(Filename).tab.cpp --defines=$(ProjectDir)%(Filename).tab.h %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)dep_grammar/%(Filename).tab.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|x64'">$(ProjectDir)dep_grammar/%(Filename).tab.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">$(ProjectDir)%(Filename).tab.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL2|x64'">$(ProjectDir)%(Filename).tab.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">$(ProjectDir)%(Filename).tab.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|x64'">c:\bison_flex\win_bison.exe -t --output=$(ProjectDir)%(Filename).tab.cpp --defines=$(ProjectDir)%(Filename).tab.h %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">c:\bison_flex\win_bison.exe -t --output=$(ProjectDir)%(Filename).tab.cpp --defines=$(ProjectDir)%(Filename).tab.h %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugDLL2|x64'">c:\bison_flex\win_bison.exe -t --output=$(ProjectDir)%(Filename).tab.cpp --defines=$(ProjectDir)%(Filename).tab.h %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">c:\bison_flex\win_bison.exe -t --output=$(ProjectDir)%(Filename).tab.cpp --defines=$(ProjectDir)%(Filename).tab.h %(FullPath)</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
